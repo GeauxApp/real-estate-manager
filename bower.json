@@ -1,0 +1,17 @@
+{
+  "name": "real-estate-manager",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Kim Sarabia <kimberly.sarabia@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
