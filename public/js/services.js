@@ -8,17 +8,18 @@ app.service('PodService', function($http) {
         return $http.get('/api/pods')
     };
 
-    this.create = function(pod) {
-        return $http.post('/pods', pod);
+    this.create = function(pd) {
+        return $http.post('/api/pods/', pd);
     }
 
-    this.delete = function(pod) {
-        return $http.delete(`/pods/${pod._id}`)
+
+    this.delete = function(pd) {
+        return $http.delete(`/api/pods/${pd._id}`);
 
     };
 
     this.update = function(editPod) {
-        return $http.put('/pods', editPod);
+        return $http.put('/api/pods', editPod);
     };
 
 })

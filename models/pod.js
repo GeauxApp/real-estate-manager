@@ -3,13 +3,13 @@
 var mongoose = require('mongoose');
 
 var PodSchema = mongoose.Schema({
-  name:  {type: String, required:true},
-  price: {type: Number, required:true},
+  name:  {type: String, default: "Pod"},
+  price: {type: Number, default: 50},
   img: {type: String},
-  time: {type: Number, required:true},
-  date: {type: Date, required:true},
+  time: {type: Number, default:true},
+  date: {type: Date, default: Date.now()},
   taken: {type: Boolean, default:false},
-  rooms: {type: Number, required:true},
+  rooms: {type: Number, default: 1},
   notes: {type: String},
   clients: [{type: String}]
 });

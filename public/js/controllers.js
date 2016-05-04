@@ -30,6 +30,7 @@ angular.module('podApp')
                 .then(function(res) {
                     $scope.pods.push(res.data)
                     $scope.pd = {}
+                console.log('$scope.pd', $scope.pd);
 
                 }, function(err) {
                     console.log(err)
@@ -59,7 +60,7 @@ angular.module('podApp')
         }
 
         $scope.deletePod = function(pd) {
-            console.log('delete')
+            console.log(pd)
             swal({
                     title: "Are you sure?",
                     text: "You will not be able to recover this pod info!",
