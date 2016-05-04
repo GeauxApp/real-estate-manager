@@ -17,5 +17,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'homeCtrl',
 
         })
+        .state('clientList', {
+            url: '/clientList',
+            templateUrl: '/html/clientList.html',
+            controller: 'homeCtrl',
+
+        })
     $urlRouterProvider.otherwise('/');
 });

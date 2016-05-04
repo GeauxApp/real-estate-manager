@@ -59,13 +59,10 @@
                             </h4>
                         </div>
                         <div class="ratings">
-                            <p class="pull-right">15 reviews</p>
+                            <p class="pull-right">Occupied</p>
                             <p>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
+                              <span class="glyphicon glyphicon-pencil"></span>
+                              <span class="glyphicon glyphicon-trash"></span>
                             </p>
                         </div>
                     </div>
@@ -81,13 +78,10 @@
                             <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <div class="ratings">
-                            <p class="pull-right">12 reviews</p>
+                            <p class="pull-right">Vacant</p>
                             <p>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-pencil"></span>
+                              <span class="glyphicon glyphicon-trash"></span>
                             </p>
                         </div>
                     </div>
@@ -103,13 +97,10 @@
                             <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                         <div class="ratings">
-                            <p class="pull-right">31 reviews</p>
+                            <p class="pull-right">Occupied</p>
                             <p>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
+                              <span class="glyphicon glyphicon-pencil"></span>
+                              <span class="glyphicon glyphicon-trash"></span>
                             </p>
                         </div>
                     </div>
@@ -121,19 +112,17 @@
                         <img ng-src="{{pod.img}}" alt="">
                         <!-- <img src="http://placehold.it/320x150" alt=""> -->
                         <div class="caption">
-                            <h4 class="pull-right">$94.99/night</h4>
+                            <h4 class="pull-right">${{pod.price}}/night</h4>
                             <h4><a href="#">{{pod.name}}</a>
                             </h4>
                             <p>{{pod.notes}}</p>
                         </div>
                         <div class="ratings">
-                            <p class="pull-right">18 reviews</p>
+                            <p class="pull-right">{{pod.taken}}</p>
                             <p>
-                                <span class="glyphicon glyphicon-star">{{pod.something}}</span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
+                                <span class="glyphicon glyphicon-pencil"  ng-click ="editPd(pd)" ></span>
+                                <span class="glyphicon glyphicon-trash"  ng-click ="deletePd(pd)" ></span>
+
                             </p>
                         </div>
                     </div>

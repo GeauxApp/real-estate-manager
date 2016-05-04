@@ -1,28 +1,40 @@
-<div class="container">
-<div class="col-md-5">
-    <div class="form-area">
-        <form role="form">
-        <br style="clear:both">
-                    <h3 style="margin-bottom: 25px; text-align: center;">Add a Pod</h3>
-    				<div class="form-group">
-						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" id="email" name="image" placeholder="Image URL" required>
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Time" required>
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" id="subject" name="subject" placeholder="Date" required>
-					</div>
-                    <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
-                    </div>
+<!-- ADD POD -->
 
-        <button type="button" id="addPd" name="submit" class="btn btn-primary pull-right">Submit Form</button>
-        </form>
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="form-area" >
+            <form role="form" name="addPod" ng-submit="addPd(pd)">
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Add a Pod</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model='pd.name' id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" ng-model='pd.price' id="price" name="price" placeholder="Price" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model='pd.name' id="img" name="img" placeholder="Image URL" required>
+                </div>
+
+                <!-- RADIO START -->
+                <p>Rooms</p>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" ng-model="rooms">Single</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" ng-model="rooms">Double</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio" ng-model="rooms">Triple</label>
+                </div>
+                <!-- RADIO END -->
+
+                <div class="form-group">
+                    <textarea class="form-control" type="textarea" ng-model='pd.notes' id="notes" placeholder="Notes" maxlength="140" rows="7"></textarea>
+                </div>
+
+                <button type="submit" id="addPd" name="submit" class="btn btn-primary pull-right">Add Pod</button>
+            </form>
+        </div>
     </div>
-</div>
 </div>

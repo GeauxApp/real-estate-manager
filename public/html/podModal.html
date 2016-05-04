@@ -1,0 +1,60 @@
+<!-- UPDATE POD -->
+
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Update a Pod</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="img" name="img" placeholder="Image URL" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="time" name="time" placeholder="Time" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Date" required>
+                </div>
+
+                <!-- TAKEN OR NOT TAKEN UPDATE -->
+                <div class="switch">
+                  <input type="checkbox" checked>
+                  <label>
+                    <span class="fontawesome-ok"></span>
+                    <span class="fontawesome-remove"></span>
+                    <div></div>
+                  </label>
+                </div>
+
+                <!-- TAKEN OR NOT TAKEN END -->
+
+                <!-- RADIO START -->
+                <p>Rooms</p>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Single</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Double</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="optradio">Triple</label>
+                </div>
+
+                <!-- RADIO END -->
+
+
+                <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="notes" placeholder="Notes" maxlength="140" rows="7"></textarea>
+                </div>
+
+                <button type="button" id="addPd" name="submit" class="btn btn-primary pull-right">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
