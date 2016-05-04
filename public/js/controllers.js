@@ -9,6 +9,8 @@ angular.module('podApp')
                 var pods = res.data;
                 $scope.pods = pods;
 
+                console.log('$scope.pods:', $scope.pods);
+
             }, function(err) {
                 console.error(err);
             });

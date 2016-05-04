@@ -9,7 +9,11 @@ body {
 }
 
 .slide-image {
-    width: 100%;
+
+}
+.thumbnail img{
+width: 320px;
+height: 150px;
 }
 
 .carousel-holder {
@@ -52,3 +56,19 @@ body {
 footer {
     margin: 50px 0;
 }
+
+
+/*FORM CSS START*/
+
+.red{
+    color:red;
+    }
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+	}
+
+/*FORM CSS END*/

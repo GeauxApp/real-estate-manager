@@ -1,13 +1,21 @@
-var app = angular.module('podApp', ['ui.router'])
-.config(function($stateProvider, $urlRouterProvider){
+'use strict';
 
-  $urlRouterProvider.otherwise("/");
+var app = angular.module('podApp', ['ui.router']);
 
-  $stateProvider
-  .state('home', {
-    url: "/",
-    templateUrl: "html/home.html",
-    controller: "homeCtrl"
-  })
+app.config(function($stateProvider, $urlRouterProvider) {
 
-})
+    $stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: '/html/home.html',
+            controller: 'homeCtrl',
+
+        })
+        .state('addPod', {
+            url: '/addPod',
+            templateUrl: '/html/addPod.html',
+            controller: 'homeCtrl',
+
+        })
+    $urlRouterProvider.otherwise('/');
+});

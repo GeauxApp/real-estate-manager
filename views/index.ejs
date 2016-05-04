@@ -17,9 +17,23 @@
     <!-- Custom CSS -->
     <link href="/css/shop-homepage.css" rel="stylesheet">
 
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/module.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/services.js"></script>
+
 </head>
 
-<body>
+<body ng-app="podApp">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -44,7 +58,7 @@
                         <a href="#">Services</a>
                     </li>
                     <li>
-                        <a href="#">Add Pod</a>
+                        <a ui-sref='addPod'>Add Pod</a>
                     </li>
                 </ul>
             </div>
@@ -53,28 +67,8 @@
         <!-- /.container -->
     </nav>
 
-    <body ng-app="podApp">
-
-        <ng-include src="'./templates/nav.html'"></ng-include>
-
         <ui-view></ui-view>
 
     </body>
-
-        <script src="/bower_components/angular" charset="utf-8"></script>
-        <script src="/bower_components/angular-ui-router" charset="utf-8"></script>
-
-        <!-- jQuery -->
-        <script src="/js/jquery.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="/js/bootstrap.min.js"></script>
-
-        <script src="/js/module.js"></script>
-        <script src="/js/controllers.js"></script>
-        <script src="/js/services.js"></script>
-
-
-
 
 </html>
