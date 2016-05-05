@@ -1,6 +1,6 @@
 angular.module('podApp')
     .controller('homeCtrl', function($scope, $stateParams, $uibModal, PodService) {
-      (console.log('home:', 'homeCtrl!'));
+        console.log('home:', 'homeCtrl!');
 
         $scope.pods = [];
 
@@ -38,31 +38,6 @@ angular.module('podApp')
                 });
         };
 
-
-        $scope.viewPod = null;
-
-        $scope.editPd = function(pod) {
-            console.log('pod:',pod);
-            $uibModal.open({
-
-              templateUrl: '/html/modal.html'
-            });
-
-        };
-
-        $scope.saveEdit = function() {
-            $scope.viewPod = null;
-        }
-
-        $scope.update = function(viewPod) {
-            PodService.update(viewPod)
-                .then(function() {
-                    swal("Your pod has been saved!", "success")
-                }, function(err) {
-                    console.log(err);
-                })
-        }
-
         $scope.deletePod = function(pd) {
             console.log(pd)
             swal({
@@ -88,48 +63,18 @@ angular.module('podApp')
                 function(err) {
                     console.log('err ', err);
                 })
-        }
+        };
 
-        //
-        // $scope.show = function() {
-        //     ModalService.showModal({
-        //         templateUrl: '/html/addPod.html',
-        //         controller: "homeCtrl"
-        //     }).then(function(showModal) {
-        //         showModal();
-        //         modal.close.then(function(result) {
-        //             $scope.message = "You said " + result;
-        //         })
-        //     })
-        // }
-
+        $scope.editPd = function(pod) {
+            console.log('pod:', pod);
+            $uibModal.open({
+                controller: 'modalCtrl',
+                templateUrl: '/html/modal.html'
+            });
+        };
     })
 
-    .controller('modalCtrl', function(){
-      console.log('modal:', 'HELLO MODAL!!!');
-    });
+.controller('modalCtrl', function() {
+    console.log('modal:', 'HELLO MODAL!!!');
 
-// .controller('Controller', function($scope, ModalService) {
-// console.log('Controller:', 'Controller Works!!!');
-//     $scope.show = function() {
-//         ModalService.showModal({
-//             templateUrl: 'modal.html',
-//             controller: "ModalController"
-//         }).then(function(modal) {
-//             modal.element.modal();
-//             modal.close.then(function(result) {
-//                 $scope.message = "You said " + result;
-//             })
-//         })
-//     }
-//
-// })
-
-// .controller('ModalController', function($scope, close) {
-//   console.log('Modal:', 'Modal Controller Works!!!');
-//
-//  $scope.close = function(result) {
-//  	close(result, 500); // close, but give 500ms for bootstrap to animate
-//  };
-//
-// });
+});
