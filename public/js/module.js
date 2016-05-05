@@ -17,6 +17,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'homeCtrl',
 
         })
+        .state('addClient', {
+            url: '/addClient',
+            templateUrl: '/html/addClient.html',
+            controller: 'homeCtrl',
+
+        })
         .state('clientList', {
             url: '/clientList',
             templateUrl: '/html/clientList.html',

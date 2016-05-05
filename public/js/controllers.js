@@ -87,10 +87,10 @@ angular.module('podApp')
     })
 
 .controller('modalCtrl', function($scope, $uibModalInstance, pod) {
-    console.log('modal:', pod);
+    console.log('pod:', pod);
 
     $scope.pod = pod;
-    
+
     $scope.ok = function() {
         $uibModalInstance.close();
     };
