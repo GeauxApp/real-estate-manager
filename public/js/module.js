@@ -20,13 +20,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('addClient', {
             url: '/addClient',
             templateUrl: '/html/addClient.html',
-            controller: 'homeCtrl',
+            controller: 'clientCtrl',
 
         })
         .state('clientList', {
             url: '/clientList',
             templateUrl: '/html/clientList.html',
-            controller: 'homeCtrl',
+            controller: 'clientCtrl',
 
         })
     $urlRouterProvider.otherwise('/');

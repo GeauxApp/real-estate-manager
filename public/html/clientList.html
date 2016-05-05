@@ -1,29 +1,85 @@
+<!-- Page Content -->
+<div class="container">
+    <!-- THUMBNAIL START -->
+
+    <div class="row">
+
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/320x150" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">Pod Six</h4>
+                    <h4><a href="#"></a>Maria</h4>
+                    <p>maria@hello.com</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">History</p>
+                    <p>
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/320x150" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">Pod Three</h4>
+                    <h4><a href="#"></a>Violet</h4>
+                    <p>violet@society.net</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">History</p>
+                    <p>
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="http://placehold.it/320x150" alt="">
+                <div class="caption">
+                    <h4 class="pull-right">Pod Four</h4>
+                    <h4><a href="#"></a>Takeshi</h4>
+                    <p>takeshi@ghibli.co.jp</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">History</p>
+                    <p>
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
 
 
-<h1 class="text-center">Clients</h1>
+        <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="client in clients track by $index">
+            <div class="thumbnail">
+                <img ng-src="{{client.img}}" alt="">
+                <!-- <img src="http://placehold.it/320x150" alt=""> -->
+                <div class="caption">
+                    <h4 class="pull-right">${{pod.price}}/night</h4>
+                    <h4><a href="#">{{pod.name}}</a>
+                            </h4>
+                    <p>{{pod.notes}}</p>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">{{pod.taken}}</p>
+                    <p>
+                        <a class="glyphicon glyphicon-pencil" ng-click="editClient(client)"></a>
+                        <a class="glyphicon glyphicon-trash" ng-click="deleteClient(client)"></a>
 
-<button class="btn btn-default btn-lg" ui-sref='newClient'>Add Client</button>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat='client in clients track by $index'>
-      <td>{{ client.name }}</td>
-      <td>{{ client.email }}</td>
-      <td>{{ client.phone }}</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td></td>
-      <td>TOTAL Clients:</td>
-      <td>{{totalClients}}</td>
-    </tr>
-  </tfoot>
-</table>
+
+
+    </div>
