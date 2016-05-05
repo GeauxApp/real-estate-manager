@@ -67,14 +67,34 @@ angular.module('podApp')
 
         $scope.editPd = function(pod) {
             console.log('pod:', pod);
-            $uibModal.open({
+
+            var modalInstance = $uibModal.open({
                 controller: 'modalCtrl',
-                templateUrl: '/html/modal.html'
+                templateUrl: '/html/modal.html',
+                resolve: {
+                  pod:pod
+                }
             });
+
+            modalInstance.result
+            .then(function() {
+              console.log('success:', 'instance success');
+            })
+            .catch(function(){
+            console.log('failure!');
+            })
         };
     })
 
-.controller('modalCtrl', function() {
-    console.log('modal:', 'HELLO MODAL!!!');
+.controller('modalCtrl', function($scope, $uibModalInstance, pod) {
+    console.log('modal:', pod);
 
+    $scope.pod = pod;
+    
+    $scope.ok = function() {
+        $uibModalInstance.close();
+    };
+    $scope.cancel = function() {
+        $uibModalInstance.dismiss();
+    };
 });
